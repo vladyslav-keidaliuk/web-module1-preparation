@@ -29,5 +29,9 @@ public class EFDataRepository : IDataRepository
         dbContext.SaveChanges();
     }
 
-    
+    public void UpdateBook(Book book)
+    {
+        dbContext.Books.Update(book);
+        dbContext.SaveChanges();
+    }
 }

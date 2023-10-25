@@ -13,15 +13,15 @@ namespace WebModuleTry2.Controllers
         }
         public IActionResult Index()
         {
-            // Add a Book
+            // ADD a Book
 
             // var book = new Book();
-            // book.Title = "Test2";
+            // book.Title = "Need to change";
             // _repository.AddBook(book);
 
             //==========================
 
-            // Delete a Book
+            // DELETE a Book
 
             // var book2 = new Book();
             // book2.Id = 3;
@@ -29,6 +29,15 @@ namespace WebModuleTry2.Controllers
             // _repository.DeleteBook(book2);
 
             //==========================
+
+            //CHANGE a Title
+
+
+            var book3 = new Book();
+            book3.Id = 6;
+            book3.Title = "Changed Title";
+            _repository.UpdateBook(book3);
+
 
             //Retun a Books that in DB
             return View(_repository.GetBooks());

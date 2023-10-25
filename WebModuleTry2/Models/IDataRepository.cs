@@ -8,4 +8,6 @@ public interface IDataRepository
   void AddBook(Book book);
 
   void DeleteBook(Book book);
+
+  void UpdateBook(Book book);
 }
